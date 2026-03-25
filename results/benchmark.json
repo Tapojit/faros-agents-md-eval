@@ -1,0 +1,78 @@
+{
+  "task": "build-cpython-from-source",
+  "generated_at": "2026-03-25T05:36:24.751634+00:00",
+  "iterations": [
+    {
+      "trials": 2,
+      "pass_rate": 1.0,
+      "model": "claude-haiku-4-5-20251001",
+      "metrics": {
+        "avg_tokens": 350808,
+        "avg_input_tokens": 106,
+        "avg_output_tokens": 3285,
+        "avg_turns": 8.0,
+        "avg_wall_clock": 48.5,
+        "avg_toolcalls": 14.0
+      },
+      "agents_md_words": 30,
+      "iteration": 0,
+      "condition": "baseline"
+    },
+    {
+      "trials": 2,
+      "pass_rate": 1.0,
+      "model": "claude-haiku-4-5-20251001",
+      "metrics": {
+        "avg_tokens": 599672,
+        "avg_input_tokens": 152,
+        "avg_output_tokens": 4460,
+        "avg_turns": 2.5,
+        "avg_wall_clock": 8.1,
+        "avg_toolcalls": 20.0
+      },
+      "agents_md_words": 73,
+      "iteration": 1,
+      "condition": "improved"
+    },
+    {
+      "trials": 3,
+      "pass_rate": 1.0,
+      "model": "claude-haiku-4-5-20251001",
+      "metrics": {
+        "avg_tokens": 420706,
+        "avg_input_tokens": 109,
+        "avg_output_tokens": 2712,
+        "avg_turns": 15.7,
+        "avg_wall_clock": 102.1,
+        "avg_toolcalls": 14.7
+      },
+      "agents_md_words": 30,
+      "iteration": 2,
+      "condition": "baseline"
+    },
+    {
+      "trials": 3,
+      "pass_rate": 1.0,
+      "model": "claude-haiku-4-5-20251001",
+      "metrics": {
+        "avg_tokens": 174237,
+        "avg_input_tokens": 55,
+        "avg_output_tokens": 1794,
+        "avg_turns": 6.3,
+        "avg_wall_clock": 57.4,
+        "avg_toolcalls": 6.0
+      },
+      "agents_md_words": 55,
+      "iteration": 3,
+      "condition": "improved"
+    }
+  ],
+  "best_iteration": 3,
+  "deltas": {
+    "pass_rate": "+0.00",
+    "tokens": "-50%",
+    "turns": "-21%",
+    "wall_clock": "+18%",
+    "agents_md_words": "+83%"
+  }
+}

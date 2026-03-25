@@ -1,0 +1,9 @@
+You are being evaluated on a coding task. Your job is to complete it as efficiently as possible.
+
+TASK: Build CPython from source in this directory. The source is already checked out. Produce a working Python interpreter. Verify it works by running: ./python -c "import ssl; import ctypes; import sqlite3; print('BUILD OK')"
+
+IMPORTANT:
+- You are on Darwin arm64
+- There IS an AGENTS.md file at ./AGENTS.md — READ IT FIRST and follow its instructions before doing anything else.
+- There may be a ./build_env.sh file that contains environment setup needed for the build. Source it if it exists.
+- Work ONLY inside the current directory.

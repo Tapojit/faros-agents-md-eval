@@ -1,0 +1,45 @@
+{
+  "type": "result",
+  "subtype": "success",
+  "is_error": false,
+  "duration_ms": 112201,
+  "duration_api_ms": 44449,
+  "num_turns": 15,
+  "result": "**Build Complete!** \u2713\n\nCPython has been successfully built from source:\n\n- **Configure**: Ran with OpenSSL, readline, sqlite, and other dependencies\n- **Build**: Compiled all modules (ssl, ctypes, sqlite3, etc.)\n- **Verification**: `./python -c \"import ssl; import ctypes; import sqlite3; print('BUILD OK')\"` \u2192 **BUILD OK**\n\nThe working Python interpreter is at `./python.exe` with a symlink at `./python`.",
+  "stop_reason": "end_turn",
+  "session_id": "e79031ea-4ee2-4b4b-b4e4-57d1125244b2",
+  "total_cost_usd": 0.0817257,
+  "usage": {
+    "input_tokens": 107,
+    "cache_creation_input_tokens": 23658,
+    "cache_read_input_tokens": 384612,
+    "output_tokens": 2717,
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 23658,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 107,
+      "outputTokens": 2717,
+      "cacheReadInputTokens": 384612,
+      "cacheCreationInputTokens": 23658,
+      "webSearchRequests": 0,
+      "costUSD": 0.0817257,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000
+    }
+  },
+  "permission_denials": [],
+  "fast_mode_state": "off",
+  "uuid": "8162d982-1d0d-411a-813b-d7ef893146f9"
+}

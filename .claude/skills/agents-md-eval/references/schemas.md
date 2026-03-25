@@ -1,0 +1,241 @@
+# JSON & CSV Schemas
+
+All data formats used by agents-md-eval. Keep this consistent -- the display_metrics.py script and the presentation slides depend on these exact field names.
+
+---
+
+## history.json
+
+Tracks iteration progression. Located at `workspace/history.json`. Updated after each iteration.
+
+```json
+{
+  "started_at": "2026-03-21T17:30:00Z",
+  "repo": "cpython",
+  "task": "build-cpython-from-source",
+  "current_best": "improved-iter2",
+  "iterations": [
+    {
+      "iteration": 0,
+      "condition": "baseline",
+      "model": "claude-sonnet-4-6",
+      "agents_md_file": "init-baseline.md",
+      "agents_md_words": 450,
+      "pass_rate": 0.33,
+      "avg_tokens": 42000,
+      "avg_input_tokens": 35000,
+      "avg_output_tokens": 7000,
+      "avg_turns": 18,
+      "avg_wall_clock": 240,
+      "is_current_best": false
+    },
+    {
+      "iteration": 1,
+      "condition": "improved",
+      "model": "claude-sonnet-4-6",
+      "agents_md_file": "improved-iter1.md",
+      "agents_md_words": 2100,
+      "pass_rate": 0.67,
+      "avg_tokens": 18000,
+      "avg_input_tokens": 14500,
+      "avg_output_tokens": 3500,
+      "avg_turns": 9,
+      "avg_wall_clock": 120,
+      "is_current_best": false
+    },
+    {
+      "iteration": 2,
+      "condition": "improved",
+      "model": "claude-sonnet-4-6",
+      "agents_md_file": "improved-iter2.md",
+      "agents_md_words": 320,
+      "pass_rate": 1.0,
+      "avg_tokens": 9200,
+      "avg_input_tokens": 7500,
+      "avg_output_tokens": 1700,
+      "avg_turns": 5,
+      "avg_wall_clock": 58,
+      "is_current_best": true
+    }
+  ],
+  "graduated_tasks": []
+}
+```
+
+---
+
+## eval_metadata.json
+
+Per-trial metadata. Located at `workspace/results/iteration-N/<trial-id>/eval_metadata.json`. Created before the trial runs. Note: this is stored in the results directory (not the worktree) so it persists after worktree teardown.
+
+```json
+{
+  "trial_id": "baseline-t1",
+  "condition": "baseline",
+  "iteration": 0,
+  "trial_num": 1,
+  "task_id": "build-cpython-from-source",
+  "task_prompt": "Build CPython from source in this directory...",
+  "agents_md_file": "init-baseline.md",
+  "agents_md_words": 450,
+  "worktree_path": "workspace/worktrees/iteration-0/baseline-t1",
+  "results_path": "workspace/results/iteration-0/baseline-t1",
+  "created_at": "2026-03-21T17:45:00Z"
+}
+```
+
+---
+
+## grading.json
+
+Grader results per trial. Located at `workspace/results/iteration-N/<trial-id>/grading.json`. Created after the trial completes. Graders run inside the worktree (to check binaries) but write output to the results directory.
+
+```json
+{
+  "graders": [
+    {
+      "id": "binary-exists",
+      "type": "file_exists",
+      "passed": true,
+      "detail": "Found: python"
+    },
+    {
+      "id": "functional-test",
+      "type": "exit_code",
+      "passed": true,
+      "detail": "exit=0, stdout=BUILD OK"
+    },
+    {
+      "id": "test-suite-smoke",
+      "type": "exit_code",
+      "passed": false,
+      "detail": "exit=1, stderr=test_math FAILED"
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 1,
+    "total": 3,
+    "all_passed": false
+  }
+}
+```
+
+---
+
+## timing.json
+
+Metrics per trial. Located at `workspace/results/iteration-N/<trial-id>/timing.json`. Created immediately when the trial completes -- this is the only chance to capture this data.
+
+```json
+{
+  "model": "claude-sonnet-4-6",
+  "n_turns": 12,
+  "n_toolcalls": 18,
+  "n_total_tokens": 28000,
+  "n_input_tokens": 22000,
+  "n_output_tokens": 6000,
+  "time_to_first_token": 1.8,
+  "output_tokens_per_sec": 52.0,
+  "time_to_last_token": 115.4,
+  "wall_clock_seconds": 160.0,
+  "tokens_per_turn": 2333
+}
+```
+
+---
+
+## metrics.csv
+
+Aggregated flat file for all trials across all iterations. Located at `workspace/results/metrics.csv`. Append-only -- one row per trial.
+
+```csv
+trial_id,condition,iteration,trial_num,passed,model,n_turns,n_toolcalls,n_total_tokens,n_input_tokens,n_output_tokens,time_to_first_token,output_tokens_per_sec,time_to_last_token,wall_clock_seconds,tokens_per_turn,agents_md_size_words,timestamp
+baseline-t1,baseline,0,1,false,claude-sonnet-4-6,18,24,42000,35000,7000,2.1,48.0,180.0,240.0,2333,450,2026-03-21T17:50:00Z
+baseline-t2,baseline,0,2,false,claude-sonnet-4-6,15,20,38000,31000,7000,1.9,50.0,160.0,210.0,2533,450,2026-03-21T18:05:00Z
+improved-t1,improved,1,1,true,claude-sonnet-4-6,5,7,9200,7500,1700,1.5,55.0,31.0,58.0,1840,2100,2026-03-21T20:15:00Z
+```
+
+This CSV is the primary input for presentation slides. Import directly into whatever tool you use for slides.
+
+**Note:** The CSV column is `agents_md_size_words` while `eval_metadata.json` uses `agents_md_words`. Both store the same value (word count of the AGENTS.md). The naming difference is intentional -- the CSV column name is more descriptive for presentation use.
+
+---
+
+## benchmark.json
+
+Aggregated per-iteration summary. Located at `workspace/results/benchmark.json`. Regenerated by `aggregate_benchmark.py`.
+
+```json
+{
+  "task": "build-cpython-from-source",
+  "iterations": [
+    {
+      "iteration": 0,
+      "condition": "baseline",
+      "model": "claude-sonnet-4-6",
+      "trials": 3,
+      "pass_rate": 0.33,
+      "metrics": {
+        "avg_tokens": 42000,
+        "avg_input_tokens": 35000,
+        "avg_output_tokens": 7000,
+        "avg_turns": 18,
+        "avg_wall_clock": 240,
+        "avg_toolcalls": 24
+      },
+      "agents_md_words": 450
+    },
+    {
+      "iteration": 2,
+      "condition": "improved",
+      "model": "claude-sonnet-4-6",
+      "trials": 3,
+      "pass_rate": 1.0,
+      "metrics": {
+        "avg_tokens": 9200,
+        "avg_input_tokens": 7500,
+        "avg_output_tokens": 1700,
+        "avg_turns": 5,
+        "avg_wall_clock": 58,
+        "avg_toolcalls": 7
+      },
+      "agents_md_words": 320
+    }
+  ],
+  "deltas": {
+    "pass_rate": "+0.67",
+    "tokens": "-78%",
+    "turns": "-72%",
+    "wall_clock": "-76%",
+    "agents_md_words": "-29%"
+  }
+}
+```
+
+---
+
+## eval suite YAML
+
+Task definitions. Located at `eval-suites/*.yaml`. See the `cpython-build.yaml` file for the live example. Key fields:
+
+```yaml
+suite: <suite-name>
+repo:
+  url: <git-url>
+  tag: <pinned-tag>
+  shallow: true
+
+task:
+  id: <task-id>
+  prompt: <what-to-tell-the-agent>
+
+graders:
+  - id: <grader-id>
+    type: file_exists | exit_code
+    path: <for-file-exists>
+    command: <for-exit-code>
+
+trials_per_condition: 3
+timeout_seconds: 600
+```

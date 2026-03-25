@@ -1,0 +1,45 @@
+{
+  "type": "result",
+  "subtype": "success",
+  "is_error": false,
+  "duration_ms": 8515,
+  "duration_api_ms": 15436,
+  "num_turns": 4,
+  "result": "\u2705 **Build complete and verified!**\n\nThe CPython build succeeded. The interpreter `./python.exe` is working correctly and can import all required modules (ssl, ctypes, sqlite3).",
+  "stop_reason": "end_turn",
+  "session_id": "d60e96c8-fab4-4ee9-ab9c-3d3e19309d25",
+  "total_cost_usd": 0.05415075000000001,
+  "usage": {
+    "input_tokens": 34,
+    "cache_creation_input_tokens": 15935,
+    "cache_read_input_tokens": 124295,
+    "output_tokens": 750,
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 15935,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 57,
+      "outputTokens": 1382,
+      "cacheReadInputTokens": 158925,
+      "cacheCreationInputTokens": 25033,
+      "webSearchRequests": 0,
+      "costUSD": 0.05415075000000001,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000
+    }
+  },
+  "permission_denials": [],
+  "fast_mode_state": "off",
+  "uuid": "efc77bae-bf96-4fdf-8b4b-d7f1f4b7e5a6"
+}

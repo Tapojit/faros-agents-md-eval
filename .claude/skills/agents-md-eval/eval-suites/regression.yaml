@@ -1,0 +1,17 @@
+# regression.yaml
+# Graduated tasks from capability suite. Must stay at 100% pass rate.
+# Run after each improvement iteration to catch backsliding.
+
+suite: regression
+pass_threshold: 1.0
+
+graduated_tasks: []
+# Tasks move here when they hit graduation criteria.
+# Format:
+# - id: build-cpython-from-source
+#   graduated_at_iteration: 3
+#   suite_ref: cpython-build.yaml
+#   baseline_metrics:
+#     avg_tokens: 9200
+#     avg_turns: 5
+#     avg_wall_clock: 58

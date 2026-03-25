@@ -1,0 +1,65 @@
+{
+  "started_at": "2026-03-25T04:54:37.991252+00:00",
+  "repo": "cpython",
+  "task": "build-cpython-from-source",
+  "current_best": "improved-iter3",
+  "iterations": [
+    {
+      "iteration": 0,
+      "condition": "baseline",
+      "model": "claude-haiku-4-5-20251001",
+      "agents_md_file": null,
+      "agents_md_words": 30,
+      "pass_rate": 1.0,
+      "avg_tokens": 350808,
+      "avg_input_tokens": 106,
+      "avg_output_tokens": 3285,
+      "avg_turns": 8.0,
+      "avg_wall_clock": 48.5,
+      "is_current_best": false
+    },
+    {
+      "iteration": 1,
+      "condition": "improved",
+      "model": "claude-haiku-4-5-20251001",
+      "agents_md_file": "improved-iter1.md",
+      "agents_md_words": 73,
+      "pass_rate": 1.0,
+      "avg_tokens": 599672,
+      "avg_input_tokens": 152,
+      "avg_output_tokens": 4460,
+      "avg_turns": 2.5,
+      "avg_wall_clock": 8.1,
+      "is_current_best": false
+    },
+    {
+      "iteration": 2,
+      "condition": "baseline",
+      "model": "claude-haiku-4-5-20251001",
+      "agents_md_file": null,
+      "agents_md_words": 30,
+      "pass_rate": 1.0,
+      "avg_tokens": 420706,
+      "avg_input_tokens": 109,
+      "avg_output_tokens": 2712,
+      "avg_turns": 15.7,
+      "avg_wall_clock": 102.1,
+      "is_current_best": false
+    },
+    {
+      "iteration": 3,
+      "condition": "improved",
+      "model": "claude-haiku-4-5-20251001",
+      "agents_md_file": "improved-iter3.md",
+      "agents_md_words": 55,
+      "pass_rate": 1.0,
+      "avg_tokens": 174237,
+      "avg_input_tokens": 55,
+      "avg_output_tokens": 1794,
+      "avg_turns": 6.3,
+      "avg_wall_clock": 57.4,
+      "is_current_best": true
+    }
+  ],
+  "graduated_tasks": []
+}

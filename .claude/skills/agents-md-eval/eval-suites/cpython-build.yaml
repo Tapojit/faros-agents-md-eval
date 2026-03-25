@@ -1,0 +1,38 @@
+# cpython-build.yaml
+# Task: Build CPython 3.12 from source
+# Grader: deterministic (binary exists + imports work + tests pass)
+
+suite: cpython-build
+repo:
+  url: https://github.com/python/cpython.git
+  tag: v3.12.0
+  shallow: true
+
+task:
+  id: build-cpython-from-source
+  prompt: |
+    Build CPython from source in this directory. The source is already
+    checked out. Produce a working Python interpreter. Verify it works
+    by running: ./python -c "import ssl; import ctypes; import sqlite3; print('BUILD OK')"
+
+graders:
+  - id: binary-exists
+    type: file_exists
+    path: python
+
+  - id: functional-test
+    type: exit_code
+    command: ./python -c "import ssl; import ctypes; import sqlite3; print('BUILD OK')"
+
+  - id: test-suite-smoke
+    type: exit_code
+    command: ./python -m test test_math test_string test_list -v --timeout 60
+
+trials_per_condition: 3
+timeout_seconds: 600
+
+conditions:
+  - id: baseline
+    agents_md_source: auto  # from /init
+  - id: improved
+    agents_md_source: latest  # latest hill-climbing iteration

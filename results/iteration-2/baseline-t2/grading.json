@@ -1,0 +1,28 @@
+{
+  "graders": [
+    {
+      "id": "binary-exists",
+      "type": "file_exists",
+      "passed": true,
+      "detail": "Found: python"
+    },
+    {
+      "id": "functional-test",
+      "type": "exit_code",
+      "passed": true,
+      "detail": "BUILD OK"
+    },
+    {
+      "id": "test-suite-smoke",
+      "type": "exit_code",
+      "passed": true,
+      "detail": " Total duration: 622 ms Total tests: run=174 skipped=2 Total test files: run=3/3 Result: SUCCESS"
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 0,
+    "total": 3,
+    "all_passed": true
+  }
+}

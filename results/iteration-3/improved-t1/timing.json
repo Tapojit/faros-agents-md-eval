@@ -1,0 +1,18 @@
+{
+  "model": "claude-haiku-4-5-20251001",
+  "n_turns": 6,
+  "n_toolcalls": 5,
+  "n_total_tokens": 137901,
+  "n_input_tokens": 44,
+  "n_output_tokens": 1388,
+  "cache_read_tokens": 120353,
+  "cache_creation_tokens": 16116,
+  "duration_ms": 78283,
+  "duration_api_ms": 14693,
+  "wall_clock_seconds": 78.3,
+  "total_cost_usd": 0.0391643,
+  "tokens_per_turn": 22983.5,
+  "n_tool_errors": 0,
+  "stop_reason": "end_turn",
+  "transcript_lines": 26
+}

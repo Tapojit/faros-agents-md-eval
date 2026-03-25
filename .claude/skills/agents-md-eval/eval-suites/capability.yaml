@@ -1,0 +1,16 @@
+# capability.yaml
+# Tasks the agent should get BETTER at over iterations.
+# When a task hits 100% pass@1 for 3 consecutive iterations, graduate to regression.yaml.
+
+suite: capability
+
+graduation:
+  pass_rate: 1.0
+  consecutive_iterations: 3
+
+tasks:
+  - id: build-cpython-from-source
+    suite_ref: cpython-build.yaml
+    why_agents_md_matters: |
+      Without context: agent guesses wrong deps, wrong configure flags, wastes turns.
+      With minimal context: exact deps, configure command, succeeds first try at fraction of tokens.

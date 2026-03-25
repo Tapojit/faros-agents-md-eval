@@ -1,0 +1,13 @@
+{
+  "trial_id": "improved-t3",
+  "condition": "improved",
+  "iteration": 3,
+  "trial_num": 3,
+  "task_id": "build-cpython-from-source",
+  "task_prompt": "Build CPython from source in this directory. The source is already checked out. Produce a working Python interpreter. Verify it works by running: ./python -c \"import ssl; import ctypes; import sqlite3; print('BUILD OK')\"",
+  "agents_md_file": "improved-iter1.md",
+  "agents_md_words": 55,
+  "worktree_path": "/Users/tapu/Desktop/Workspace/sndbox/workspace/worktrees/iteration-3/improved-t3",
+  "results_path": "/Users/tapu/Desktop/Workspace/sndbox/workspace/results/iteration-3/improved-t3",
+  "created_at": "2026-03-25T05:31:11Z"
+}
