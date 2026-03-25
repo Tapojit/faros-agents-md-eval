@@ -9,7 +9,7 @@
 | **avg wall clock** | 80.7s | 37.7s | **↓ 53%** |
 | **avg tokens** | 392,747 | 344,411 | **↓ 12%** |
 
-> **[Download the slide deck →](results/faros-presentation.pptx)** · **[Open the interactive eval viewer →](results/eval-viewer.html)** (download and open locally to explore full transcripts, tool call sequences, and per-trial metrics)
+> **[Download the slide deck →](results/faros-presentation.pptx)** · **[Open the interactive eval viewer →](https://tapojit.github.io/faros-agents-md-eval/results/eval-viewer.html)** (live — explore full transcripts, tool call sequences, and per-trial metrics)
 
 ---
 
@@ -192,7 +192,7 @@ The baseline has extreme variance (σ = 6.7 turns) because without targeted guid
 
 **Statistical caveat:** n=5 per condition. The direction is clear, but with more compute budget I'd run 50 trials and compute bootstrap confidence intervals with a Mann-Whitney U test for significance.
 
-> **[Open the interactive eval viewer →](results/eval-viewer.html)** to explore full transcripts, tool call sequences, and per-trial metrics. Download the HTML file and open it locally in your browser.
+> **[Open the interactive eval viewer →](https://tapojit.github.io/faros-agents-md-eval/results/eval-viewer.html)** to explore full transcripts, tool call sequences, and per-trial metrics.
 
 All raw data: [`results/metrics.csv`](results/metrics.csv) · [`results/benchmark.json`](results/benchmark.json) · [`results/history.json`](results/history.json)
 
