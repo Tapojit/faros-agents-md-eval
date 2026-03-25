@@ -7,7 +7,6 @@
   "num_turns": 11,
   "result": "**Build complete and verified!** \n\nCPython has been successfully built from source with:\n- Configured using openssl and other dependencies from Homebrew\n- Built with optimizations (O3)\n- All required modules (ssl, ctypes, sqlite3) working correctly\n- Verification passed with the required command",
   "stop_reason": "end_turn",
-  "session_id": "69bc1c17-3176-494a-960e-df205c3fb7f2",
   "total_cost_usd": 0.04756915,
   "usage": {
     "input_tokens": 72,
@@ -40,6 +39,5 @@
     }
   },
   "permission_denials": [],
-  "fast_mode_state": "off",
-  "uuid": "29f255b0-ed24-46ae-9980-0071b760ef8a"
+  "fast_mode_state": "off"
 }

@@ -7,7 +7,6 @@
   "num_turns": 21,
   "result": "Perfect! CPython has been successfully built from source. The build process completed with:\n\n1. \u2713 Configured with build environment (openssl, readline, sqlite, xz, zlib)\n2. \u2713 Compiled with `make` \n3. \u2713 Created working `./python` interpreter\n4. \u2713 Verified with test: `./python -c \"import ssl; import ctypes; import sqlite3; print('BUILD OK')\"`\n\n**Result: BUILD OK**\n\nThe Python interpreter is now ready to use at `./python` with all required modules (SSL, ctypes, sqlite3) properly built and functional.",
   "stop_reason": "end_turn",
-  "session_id": "8703338f-88cc-4abe-8334-eb6168b4f50e",
   "total_cost_usd": 0.12243355000000002,
   "usage": {
     "input_tokens": 149,
@@ -40,6 +39,5 @@
     }
   },
   "permission_denials": [],
-  "fast_mode_state": "off",
-  "uuid": "652f2bc1-d444-43db-953b-6592bec83a93"
+  "fast_mode_state": "off"
 }

@@ -4,3 +4,9 @@ workspace/
 node_modules/
 __pycache__/
 *.pyc
+.claude/
+
+# Sensitive eval artifacts
+debug.log
+stderr.log
+transcript.jsonl

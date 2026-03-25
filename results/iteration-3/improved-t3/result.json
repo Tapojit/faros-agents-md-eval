@@ -7,7 +7,6 @@
   "num_turns": 4,
   "result": "\u2705 **Build complete and verified!**\n\nThe CPython build succeeded. The interpreter `./python.exe` is working correctly and can import all required modules (ssl, ctypes, sqlite3).",
   "stop_reason": "end_turn",
-  "session_id": "d60e96c8-fab4-4ee9-ab9c-3d3e19309d25",
   "total_cost_usd": 0.05415075000000001,
   "usage": {
     "input_tokens": 34,
@@ -40,6 +39,5 @@
     }
   },
   "permission_denials": [],
-  "fast_mode_state": "off",
-  "uuid": "efc77bae-bf96-4fdf-8b4b-d7f1f4b7e5a6"
+  "fast_mode_state": "off"
 }

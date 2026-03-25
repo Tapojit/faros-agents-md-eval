@@ -7,7 +7,6 @@
   "num_turns": 15,
   "result": "**Build Complete!** \u2713\n\nCPython has been successfully built from source:\n\n- **Configure**: Ran with OpenSSL, readline, sqlite, and other dependencies\n- **Build**: Compiled all modules (ssl, ctypes, sqlite3, etc.)\n- **Verification**: `./python -c \"import ssl; import ctypes; import sqlite3; print('BUILD OK')\"` \u2192 **BUILD OK**\n\nThe working Python interpreter is at `./python.exe` with a symlink at `./python`.",
   "stop_reason": "end_turn",
-  "session_id": "e79031ea-4ee2-4b4b-b4e4-57d1125244b2",
   "total_cost_usd": 0.0817257,
   "usage": {
     "input_tokens": 107,
@@ -40,6 +39,5 @@
     }
   },
   "permission_denials": [],
-  "fast_mode_state": "off",
-  "uuid": "8162d982-1d0d-411a-813b-d7ef893146f9"
+  "fast_mode_state": "off"
 }

@@ -7,7 +7,6 @@
   "num_turns": 6,
   "result": "Build successful! The Python interpreter has been built and verified:\n\n- **Binary location:** `./python.exe` (in the current directory)\n- **Verification:** All required modules (ssl, ctypes, sqlite3) imported successfully\n- **Output:** `BUILD OK`\n\nCPython is now ready to use from this directory.",
   "stop_reason": "end_turn",
-  "session_id": "b042aca7-fbe9-466e-a7cd-46e6256e4213",
   "total_cost_usd": 0.0391643,
   "usage": {
     "input_tokens": 44,
@@ -40,6 +39,5 @@
     }
   },
   "permission_denials": [],
-  "fast_mode_state": "off",
-  "uuid": "3bf1b7d0-014d-40fc-964f-d0d4f606d7fc"
+  "fast_mode_state": "off"
 }

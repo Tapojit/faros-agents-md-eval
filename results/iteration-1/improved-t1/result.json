@@ -7,7 +7,6 @@
   "num_turns": 1,
   "result": "The background build task has completed successfully (exit code 0), confirming that the CPython compilation finished without errors. The verification I already ran demonstrates the build is working correctly.",
   "stop_reason": "end_turn",
-  "session_id": "8c5a4a77-33eb-428c-bf9b-466caef8703b",
   "total_cost_usd": 0.13671565,
   "usage": {
     "input_tokens": 10,
@@ -40,6 +39,5 @@
     }
   },
   "permission_denials": [],
-  "fast_mode_state": "off",
-  "uuid": "78376d0c-6bc6-40b7-baad-de85b471a16e"
+  "fast_mode_state": "off"
 }
